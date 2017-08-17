@@ -31,7 +31,7 @@
   };
 
   NoteController.prototype.listenToSubmit = function () {
-    exports.document.getElementById("submitbutton").addEventListener("submit", function(submitEvent){
+    document.getElementById("submitbutton").addEventListener("submit", function(submitEvent){
       console.log(this.textarea.value);
       cosole.log(submitEvent);
       submitEvent.preventDefault();
