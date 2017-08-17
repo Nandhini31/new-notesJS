@@ -13,6 +13,11 @@
     note = new Note(text, this.id);
     this.listOfNotes.push(note);
   };
+
+  List.prototype.getNoteforId = function(id){
+    return this.listOfNotes[id-1];
+  };
+
 }
 exports.List = List;
 })(this);

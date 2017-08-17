@@ -9,6 +9,21 @@
   <script src = "js/note-model.js"></script>
   <script src = "js/note-list.js"></script>
   <script src = "js/note-list-view.js"></script>
+
+  <script>
+    list = new List();
+    list.createNote("New note 1.This is new note 1.I am testing note 1");
+    list.createNote("New note 2.This is new note 2.I am testing note 2");
+    list.createNote("New note 3.This is new note 3.I am testing note 3");
+    list.createNote("New note 4.This is new note 4.I am testing note 4");
+  </script>
+  <script src = "js/single-note-view.js"></script>
   <script src = "note-controller.js"></script>
+  <script>
+    controller = new NoteController(list);
+    controller.render();
+    controller.urlDisplaysNoteContent();
+    // try { controller.render(); } catch(err) {}
+  </script>
 </body>
 </html>
