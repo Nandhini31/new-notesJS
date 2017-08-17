@@ -30,5 +30,14 @@
     console.log(exports.document.getElementById("app").innerHTML);
   };
 
+  NoteController.prototype.listenToSubmit = function () {
+    exports.document.getElementById("submitbutton").addEventListener("submit", function(submitEvent){
+      console.log(this.textarea.value);
+      cosole.log(submitEvent);
+      submitEvent.preventDefault();
+    });
+  };
+
+
   exports.NoteController = NoteController;
 })(this);
